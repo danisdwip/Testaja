@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ff7a1a">
+  <meta name="description" content="The personal website of Danis Dwi Prasetyanto — web developer, builder, and lifelong learner.">
+  <title>Danis Dwi Prasetyanto — Building with curiosity</title>
+  <style>
+    :root{--orange:#ff7a1a;--orange2:#ff9b45;--cream:#fff8ef;--ink:#29221d;--muted:#76675c;--card:#fffdf9;--line:#f1dfcf;--shadow:0 18px 55px #7a3c1514}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6}
+    body.night{--cream:#201a16;--ink:#fff4e9;--muted:#d0bcae;--card:#2c231d;--line:#4b392d;--shadow:0 18px 55px #0003}
+    a{color:inherit}button{font:inherit;cursor:pointer}.wrap{width:min(1120px,calc(100% - 40px));margin:auto}
+    nav{display:flex;align-items:center;justify-content:space-between;padding:22px 0;gap:18px}.brand{font-weight:900;letter-spacing:-.04em;text-decoration:none}.brand span{color:var(--orange)}.navlinks{display:flex;align-items:center;gap:22px}.navlinks a{text-decoration:none;color:var(--muted);font-size:.94rem}.navlinks a:hover{color:var(--orange)}.theme{border:1px solid var(--line);background:var(--card);border-radius:999px;padding:9px 13px}
+    .hero{position:relative;overflow:hidden;display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:30px;padding:68px 0 82px}.eyebrow{display:inline-flex;align-items:center;gap:8px;border:1px solid #ffd2ad;background:#fff0e2;color:#99450c;border-radius:999px;padding:7px 13px;font-size:.83rem;font-weight:750}.dot{width:8px;height:8px;background:#ff7a1a;border-radius:50%;box-shadow:0 0 0 4px #ff7a1a22}
+    h1{font-size:clamp(3rem,7vw,5.8rem);line-height:.99;letter-spacing:-.075em;margin:22px 0}.accent{color:var(--orange)}.hero p{max-width:560px;color:var(--muted);font-size:1.1rem}.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:27px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;text-decoration:none;border-radius:14px;padding:13px 18px;font-weight:800;border:1px solid var(--line);transition:transform .2s,box-shadow .2s}.btn:hover{transform:translateY(-3px);box-shadow:var(--shadow)}.primary{background:var(--orange);border-color:var(--orange);color:white}.secondary{background:var(--card)}
+    .art{min-height:360px;position:relative;display:grid;place-items:center}.sun{width:min(310px,75vw);aspect-ratio:1;border-radius:42% 58% 60% 40%/48% 43% 57% 52%;background:linear-gradient(135deg,#ffb15c,#ff7415);display:grid;place-items:center;transform:rotate(-8deg);box-shadow:0 35px 70px #ff7a1a35;animation:float 6s ease-in-out infinite}.sun-inner{transform:rotate(8deg);text-align:center;color:#fff}.sun-inner .emoji{font-size:6.5rem;display:block;filter:drop-shadow(0 8px 5px #9d400a2a)}.sun-inner strong{font-size:1.2rem;letter-spacing:-.02em}.spark{position:absolute;font-size:2rem;animation:twinkle 3s ease-in-out infinite}.s1{top:14%;right:8%}.s2{bottom:15%;left:6%;animation-delay:1s}.s3{top:21%;left:10%;font-size:1.5rem;animation-delay:1.6s}.float-card{position:absolute;bottom:10%;right:0;background:var(--card);border:1px solid var(--line);box-shadow:var(--shadow);padding:12px 16px;border-radius:16px;font-size:.9rem;font-weight:750;transform:rotate(4deg)}
+    section{padding:52px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:18px;margin-bottom:24px}.kicker{color:var(--orange);font-weight:850;font-size:.8rem;text-transform:uppercase;letter-spacing:.13em}.section-head h2{font-size:clamp(2rem,4vw,3rem);letter-spacing:-.06em;line-height:1.1;margin:7px 0}.section-head p{color:var(--muted);max-width:450px;margin:0}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.panel{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:25px;box-shadow:var(--shadow)}.panel h3{margin:0 0 8px;font-size:1.2rem}.panel p{color:var(--muted);margin:0}.chips{display:flex;flex-wrap:wrap;gap:9px;margin-top:18px}.chip{background:#fff0e2;color:#9c4a11;border:1px solid #ffd9bb;border-radius:999px;padding:7px 11px;font-size:.86rem;font-weight:750}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.project{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:22px;transition:transform .2s,border-color .2s}.project:hover{transform:translateY(-5px);border-color:#ffb16e}.project-icon{width:48px;height:48px;display:grid;place-items:center;background:#fff0e2;border-radius:15px;font-size:1.5rem;margin-bottom:20px}.project h3{margin:0 0 8px}.project p{color:var(--muted);font-size:.94rem;margin:0 0 16px}.project a{font-weight:800;color:var(--orange);text-decoration:none}
+    .now{background:linear-gradient(110deg,#ff7a1a,#ff9c43);color:#fff;border-radius:28px;padding:32px;display:flex;align-items:center;justify-content:space-between;gap:24px}.now h2{font-size:clamp(1.8rem,4vw,2.8rem);line-height:1.1;letter-spacing:-.05em;margin:8px 0}.now p{margin:0;max-width:600px;color:#fff4e8}.now .btn{background:white;color:#a84705;border-color:white;white-space:nowrap}
+    footer{padding:35px 0 45px;color:var(--muted);font-size:.9rem}.foot{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:22px}.socials{display:flex;gap:16px}.socials a{text-decoration:none}.socials a:hover{color:var(--orange)}
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity .65s ease,transform .65s ease}.reveal.visible{opacity:1;transform:none}.small-note{font-size:.82rem;color:var(--muted);margin-top:14px}
+    @keyframes float{0%,100%{transform:translateY(0) rotate(-8deg)}50%{transform:translateY(-12px) rotate(-4deg)}}@keyframes twinkle{0%,100%{transform:scale(1) rotate(0)}50%{transform:scale(1.2) rotate(12deg)}}
+    @media(max-width:760px){.navlinks a{display:none}.hero{grid-template-columns:1fr;padding:45px 0 50px}.art{min-height:290px;grid-row:1}.sun{width:245px}.sun-inner .emoji{font-size:5rem}.float-card{right:5%}.about-grid,.cards{grid-template-columns:1fr}.section-head{display:block}.section-head p{margin-top:10px}.now{align-items:flex-start;flex-direction:column}.wrap{width:min(100% - 30px,1120px)}}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;scroll-behavior:auto!important;transition:none!important}.reveal{opacity:1;transform:none}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <nav aria-label="Main navigation">
+      <a class="brand" href="#home">danis<span>.</span></a>
+      <div class="navlinks"><a href="#about">About</a><a href="#interests">What I do</a><a href="#connect">Connect</a></div>
+      <button class="theme" id="themeToggle" type="button" aria-label="Toggle color theme">☾ Theme</button>
+    </nav>
+    <main>
+      <section class="hero" id="home">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="dot"></span> Developer · Curious by nature</div>
+          <h1>Hi, I'm Danis.<br><span class="accent">I build things</span><br>for the web.</h1>
+          <p>A web developer who enjoys solving problems, learning new technology, and turning ideas into useful digital experiences. Glad you're here!</p>
+          <div class="actions"><a class="btn primary" href="#about">A little about me <span aria-hidden="true">↘</span></a><a class="btn secondary" href="https://github.com/danisdwip" target="_blank" rel="noopener noreferrer">Explore my GitHub ↗</a></div>
+        </div>
+        <div class="art" aria-label="Playful orange illustration">
+          <span class="spark s1">✦</span><span class="spark s2">✳</span><span class="spark s3">✦</span>
+          <div class="sun"><div class="sun-inner"><span class="emoji">👋</span><strong>Ideas → Impact</strong></div></div>
+          <div class="float-card">☀️ Stay curious. Keep building.</div>
+        </div>
+      </section>
+      <section id="about" class="reveal">
+        <div class="section-head"><div><div class="kicker">A quick introduction</div><h2>Curiosity is my<br>favorite tool.</h2></div><p>I like the mix of logic and creativity that comes with building software: understanding a challenge, finding a clean solution, and making it work for people.</p></div>
+        <div class="about-grid">
+          <article class="panel"><h3>👨‍💻 The developer</h3><p>My professional interests center on web development and backend systems. I enjoy practical engineering, thoughtful problem-solving, and making applications more reliable and useful.</p><div class="chips"><span class="chip">C# / .NET</span><span class="chip">Azure</span><span class="chip">SQL</span><span class="chip">Backend systems</span></div></article>
+          <article class="panel"><h3>🌱 Always learning</h3><p>Technology never stands still, so neither should we. I'm interested in exploring better ways to build, share what I learn, and keep improving one project at a time.</p><div class="chips"><span class="chip">Learning</span><span class="chip">Problem solving</span><span class="chip">Building</span></div></article>
+        </div>
+        <p class="small-note">This page is a personal introduction, not a complete CV. Technical interests reflect topics associated with my work and learning.</p>
+      </section>
+      <section id="interests" class="reveal">
+        <div class="section-head"><div><div class="kicker">Things I enjoy</div><h2>Build. Learn. Share.</h2></div><p>A few themes that shape the way I approach technology and my work.</p></div>
+        <div class="cards">
+          <article class="project"><div class="project-icon">🧩</div><h3>Solving real problems</h3><p>Breaking complicated requirements into clear, maintainable solutions that help people get things done.</p><a href="https://github.com/danisdwip" target="_blank" rel="noopener noreferrer">See GitHub profile ↗</a></article>
+          <article class="project"><div class="project-icon">⚙️</div><h3>Backend engineering</h3><p>Exploring APIs, databases, cloud services, and the details that make applications dependable.</p><a href="https://github.com/danisdwip" target="_blank" rel="noopener noreferrer">Explore code ↗</a></article>
+          <article class="project"><div class="project-icon">💡</div><h3>Community & learning</h3><p>Growing through shared knowledge, professional communities, and conversations with other developers.</p><a href="https://phpid-jakarta.github.io/daftar-member.html" target="_blank" rel="noopener noreferrer">PHP Indonesia community ↗</a></article>
+        </div>
+      </section>
+      <section id="connect" class="reveal">
+        <div class="now"><div><div class="kicker" style="color:#fff4e8">Let's connect</div><h2>Good ideas start<br>with a conversation.</h2><p>Want to explore my work or connect about technology? Find me on GitHub.</p></div><a class="btn" href="https://github.com/danisdwip" target="_blank" rel="noopener noreferrer">Visit GitHub ↗</a></div>
+      </section>
+    </main>
+    <footer><div class="foot"><span>© <span id="year"></span> Danis Dwi Prasetyanto · Made with curiosity and a little orange ☀️</span><div class="socials"><a href="https://github.com/danisdwip" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="https://phpid-jakarta.github.io/daftar-member.html" target="_blank" rel="noopener noreferrer">Community ↗</a></div></div></footer>
+  </div>
+  <script>
+    const body = document.body;
+    const themeToggle = document.getElementById('themeToggle');
+    themeToggle.addEventListener('click', () => {
+      body.classList.toggle('night');
+      const night = body.classList.contains('night');
+      themeToggle.textContent = night ? '☀ Light' : '☾ Theme';
+      themeToggle.setAttribute('aria-label', night ? 'Switch to light theme' : 'Switch to dark theme');
+    });
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const observer = new IntersectionObserver(entries => entries.forEach(entry => {
+      if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+    }), {threshold: 0.12});
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
